@@ -7,6 +7,7 @@ pipeline {
         stage ("bulild") {
             steps {
                 echo "pipeline for timeout"
+                sleep 60
             }
         }
     }
