@@ -2,14 +2,13 @@ pipeline {
     agent {
         label "java-node"
     }
-    stages {
-        stage ("build_within_time") {
+    stags {
+        stage ("build") {
             steps {
-                timeout (time : 30, unit : "SECONDS") {
-                    echo "sleeping 30 sec"
-                    sleep 60
-                }
+                timeout( time :30, unit: "seconds")
+                echo "testing"
+                sleep 20
             }
         }
     }
-  }
+}
