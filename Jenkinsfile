@@ -1,14 +1,15 @@
 pipeline {
     agent {
         label "java-node"
-    }
-
     stages {
-        stage ("bulild") {
+        stage ("build_within_time") {
             steps {
-                echo "pipeline for timeout"
-                sleep 60
+                timeout (time : 30, unit : "SECONDS") {
+                    echo "sleeping 30 sec"
+                    sleep 60
+                }
             }
         }
     }
+  }
 }
