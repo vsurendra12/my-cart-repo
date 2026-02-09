@@ -1,12 +1,10 @@
 pipeline {
-    agent any
+    agent "java-node"
+
     stages {
-        stage ("Build-Hello") {
+        stage ("bulild") {
             steps {
-                echo "Hello from git repo"
-                echo "added this extra line in stage"
-                sh "hostname -i"
-                echo "added one more line under sh "
+                echo "pipeline for timeout"
             }
         }
     }
