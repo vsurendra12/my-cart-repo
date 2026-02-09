@@ -2,7 +2,7 @@ pipeline {
     agent {
         label "java-node"
     }
-    stags {
+    stages {
         stage ("build") {
             steps {
                 timeout( time :30, unit: "seconds")
