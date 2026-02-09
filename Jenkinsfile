@@ -1,6 +1,7 @@
 pipeline {
     agent {
         label "java-node"
+    }
     stages {
         stage ("build_within_time") {
             steps {
@@ -12,4 +13,3 @@ pipeline {
         }
     }
   }
-}
